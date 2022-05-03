@@ -37,11 +37,10 @@
 
 // }
 
+
 $(function () {
         $(".g-form").submit(function (event) {
                 event.preventDefault();
-                alert(test);
-                return;
 
                 // Ссылка, которую получили на этапе публикации приложения
                 let appLink = "https://script.google.com/macros/s/AKfycbxwlOCo2bP2hwar8dMKahkLJbSsY6Auvo7pqEhU8LB-yRKqm3QIyoXe2skXXiOazQcJPw/exec";
