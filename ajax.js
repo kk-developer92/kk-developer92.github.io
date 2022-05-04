@@ -38,6 +38,8 @@
 // }
 
 
+
+
 $(function () {
         $('input[type=tel]').mask('+7(000)000-00-00');
         $(".g-form").submit(function (event) {
