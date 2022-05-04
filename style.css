@@ -1,7 +1,7 @@
 body {
     font-family: 'Museo Sans 300 Light';
     font-size: 16px;
-    background: #fff url(img/stars.png) repeat top center;
+    /* background: #fff url(img/stars.png) repeat top center; */
 }
 
 .clear {
@@ -825,4 +825,18 @@ body {
 .p-1001 {
     text-align: center;
     color: #555;
+}
+
+
+
+.g-form__preloader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.40) url('img/preloader.gif') no-repeat center center / 40px;
+    opacity: 0;
+    z-index: 1;
+    display: none;
 }

@@ -39,6 +39,7 @@
 
 
 $(function () {
+        $('.g-form__input_tel').mask('+7(000)000-00-00');
         $(".g-form").submit(function (event) {
                 event.preventDefault();
 
@@ -46,10 +47,10 @@ $(function () {
                 let appLink = "https://script.google.com/macros/s/AKfycbxwlOCo2bP2hwar8dMKahkLJbSsY6Auvo7pqEhU8LB-yRKqm3QIyoXe2skXXiOazQcJPw/exec";
 
                 // Сообщение при успешной отправке данных
-                let successRespond = 'Сообщение успешно отправлено. Посмотрите результат <a target="_blank" href="https://docs.google.com/spreadsheets/d/1jNYjr-mDAR22joBML7m7dHWjBsxfihyxipSwv_4tIJ0/edit?usp=sharing">тут</a>';
+                let successRespond = 'Сообщение успешно отправлено.';
 
                 // Сообщение при ошибке в отправке данных
-                let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:smart-landing@ya.ru">smart-landing@ya.ru</a>';
+                let errorRespond = 'Не удалось отправить сообщение. Cвяжитесь с администратором сайта по адресу <a href="mailto:kk.developer92@yandex.ru">kk.developer92@yandex.ru</a>';
 
                 // Id текущей формы
                 let form = $('#' + $(this).attr('id'))[0];
@@ -87,7 +88,7 @@ $(function () {
                                 }
 
                                 // Показываем прелоадер
-                                preloader.css('opacity', '1');
+                                preloader.css({ 'opacity': '1', 'display': block });
 
                                 // Делаем неактивной кнопку отправки
                                 submitButton.prop('disabled', true);
@@ -101,9 +102,9 @@ $(function () {
                         if (jqXHR.readyState === 4 && jqXHR.status === 200) {
 
                                 // Прячем заголовок формы
-                                formTitle.css({
-                                        'display': 'none'
-                                });
+                                // formTitle.css({
+                                //         'display': 'none'
+                                // });
 
                                 // Прячем прелоадер
                                 preloader.css('opacity', '0');
@@ -137,18 +138,18 @@ $(function () {
                                 console.log('Гугл не ответил статусом 200');
                         }
                 }).fail(function (res, textStatus, jqXHR) {
-                        formTitle.css({
-                                'display': 'none'
-                        });
+                        // formTitle.css({
+                        //         'display': 'none'
+                        // });
                         preloader.css('opacity', '0');
                         formRespond.html('Не удалось отправить сообщение. Cвяжитесь с администратором сайта другим способом').css('color', '#c64b4b');
                         setTimeout(() => {
                                 formRespond.css({
                                         'display': 'none'
                                 });
-                                formTitle.css({
-                                        'display': 'block'
-                                });
+                                // formTitle.css({
+                                //         'display': 'block'
+                                // });
                                 submitButton.prop('disabled', false);
                         }, 5000);
 
