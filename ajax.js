@@ -88,7 +88,7 @@ $(function () {
                                 }
 
                                 // Показываем прелоадер
-                                preloader.css({ 'opacity': '1', 'display': block });
+                                preloader.css({ 'opacity': '1', 'display': 'block' });
 
                                 // Делаем неактивной кнопку отправки
                                 submitButton.prop('disabled', true);
@@ -107,7 +107,7 @@ $(function () {
                                 // });
 
                                 // Прячем прелоадер
-                                preloader.css('opacity', '0');
+                                preloader.css({'opacity': '0', 'display' : 'none'});
 
                                 // Выводим ответ формы.
                                 formRespond.html(successRespond).css('color', '#37b599');
