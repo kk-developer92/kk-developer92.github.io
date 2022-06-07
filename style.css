@@ -109,7 +109,7 @@ body {
 
 #block-1 {
     padding-top: 30px;
-    background: url(img/bg-8.jpg) bottom -500px center;
+    background: url(img/bg-8.jpg) bottom -500px center / cover;
     height: 900px;
     position: relative;
     overflow-x: hidden;
