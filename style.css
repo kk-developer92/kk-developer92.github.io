@@ -147,6 +147,23 @@ body {
     font-weight: bold;
 }
 
+.div-top-phone .online {
+    position: relative;
+    padding-left: 15px;
+}
+
+.div-top-phone .online:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 0;
+    top: 7px;
+    background: #25D266;
+    border-radius: 50%;
+}
+
+
 #block-1 h1 {
     font-size: 52px;
     margin-top: 100px;
