@@ -133,7 +133,7 @@ body {
 }
 
 .div-top-phone {
-    width: 275px;
+    width: 290px;
     float: right;
     background: url(img/icon-top-phone.png) no-repeat left top 28px;
     padding-left: 40px;
@@ -144,6 +144,7 @@ body {
 .div-top-phone a {
     font-size: 28px;
     color: #333;
+    font-weight: bold;
 }
 
 #block-1 h1 {
